@@ -1,0 +1,80 @@
+---
+title: "Untitled"
+author: "Claus Thorn Ekstrøm"
+date: "September 1st, 2022"
+format: 
+  revealjs:
+    transition: fade
+    navigation-mode: vertical
+    theme: /Users/ekstrom/ku.scss
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+# Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r echo=TRUE}
+1 + 1
+```
+
+
+## Hvad med denne
+
+asd
+asd
+
+## Og denne
+
+
+asd
+asd
+asd
+
+
+# Og så
+
+```{r echo=FALSE,warning=FALSE}
+library(ggplot2)
+library(ggthemr)
+
+claus <- define_palette(swatch = c('#eeeeee', '#901A1E', 'lightblue', 'green', 'blue', 'brown', 'purple', 'yellow'), 
+  gradient = c(lower = 'red', upper = 'green'),
+                        background = "#16161d", 
+                        text = c("#eeeeee", "#eeeeee"), 
+                        line = c("#ee1e1e", "#6e6e6e"), # Axis lines 
+                        gridline = "#434343") # Gridlines
+
+
+ggthemr(claus, layout="scientific", type = 'outer', spacing=1.2)
+
+mpg_plot <- ggplot(mpg[mpg$drv != '4', ], aes(factor(cyl), cty, fill = drv)) + 
+  geom_boxplot() + labs(x = 'Cylinders', y = 'City MPG', fill = 'Drive Type') +
+  theme(legend.position = 'bottom')
+mpg_plot
+```
+
+## Graphics - ggplot2
+
+```{r echo=FALSE,message=FALSE, warning=FALSE, error=FALSE}
+library(extrafont)
+loadfonts()
+library(ggplot2)
+p <- ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point(size=3) +
+  ggtitle("Fuel Efficiency of 32 Cars") +
+  xlab("Weight (x1000 lb)") + ylab("Miles per Gallon") +
+  theme(text=element_text(size=16, family="Comic Sans MS"))
+p
+```
+

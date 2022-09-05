@@ -1,0 +1,27 @@
+/*-- scss:defaults --*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya:400,400i,700,700i|Alegreya+Sans');
+
+
+// fonts
+$font-family-sans-serif: "Alegreya", sans-serif !default;
+
+// colors
+$body-bg: #16161d !default;
+$body-color: #fff !default;
+$link-color: #901A1E !default;
+$selection-bg: #e7ad52 !default;
+$input-panel-bg: rgba(233, 236, 239, 0.2) !default;
+
+
+// headings
+$presentation-heading-font: "Open Sans", Impact, sans-serif;
+$presentation-heading-letter-spacing: -0.03em;
+
+// code blocks
+$code-block-border-color: rgba(233, 236, 239, 0.5) !default;
+
+
