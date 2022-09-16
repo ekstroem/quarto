@@ -1,12 +1,20 @@
 ---
-title: "Untitled"
+title: "Quarto example template"
+subtitle: "Aloha"
 author: "Claus Thorn Ekstrøm"
 date: "September 1st, 2022"
 format: 
   revealjs:
     transition: fade
     navigation-mode: vertical
+    progress: false
     theme: /Users/ekstrom/ku.scss
+# Modify the title slide    
+    title-slide-attributes:
+      data-background-image: kulogowhiteq.png
+      data-background-size: 30%
+      data-background-position: 100% 100%
+#    self-contained: true
 editor: visual
 ---
 
@@ -14,12 +22,25 @@ editor: visual
 
 Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
 
+
+      data-background-position: 100% 100%;
+
+
+::: aside
+Aside
+:::
+
+
+## {background-color="black" background-image="https://placekitten.com/100/100" background-size="100px" background-repeat="repeat"}
+
+
 ## Bullets
 
 When you click the **Render** button a document will be generated that includes:
 
 -   Content authored with markdown
 -   Output from executable code
+
 
 # Code
 
@@ -29,19 +50,13 @@ When you click the **Render** button a presentation will be generated that inclu
 1 + 1
 ```
 
-
 ## Hvad med denne
 
-asd
-asd
+asd asd
 
 ## Og denne
 
-
-asd
-asd
-asd
-
+asd asd asd
 
 # Og så
 
@@ -77,4 +92,3 @@ p <- ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point(size=3) +
   theme(text=element_text(size=16, family="Comic Sans MS"))
 p
 ```
-
