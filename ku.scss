@@ -8,6 +8,8 @@
 
 // fonts
 $font-family-sans-serif: "Alegreya", sans-serif !default;
+$font-size-root: 220% !default;
+// $h1-font-size: 
 
 // colors
 $body-bg: #16161d !default;
@@ -15,7 +17,7 @@ $body-color: #fff !default;
 $link-color: #901A1E !default;
 $selection-bg: #e7ad52 !default;
 $input-panel-bg: rgba(233, 236, 239, 0.2) !default;
-
+$aside-text-color: #222 !default;
 
 // headings
 $presentation-heading-font: "Open Sans", Impact, sans-serif;
@@ -25,3 +27,15 @@ $presentation-heading-letter-spacing: -0.03em;
 $code-block-border-color: rgba(233, 236, 239, 0.5) !default;
 
 
+
+
+.reveal .slide aside,
+.reveal .slide div.aside {
+    position: absolute;
+    writing-mode: vertical-rl;
+    right: 8px;
+    bottom: 40px;
+    color: #555555 ;
+    font-size: 50% ;
+    transform: rotate(180deg);
+}

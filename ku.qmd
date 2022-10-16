@@ -5,17 +5,22 @@ author: "Claus Thorn Ekstrøm"
 date: "September 1st, 2022"
 format: 
   revealjs:
+    width: 1244
+    height: 700
     transition: fade
     navigation-mode: vertical
+    chalkboard: true
     progress: false
+#    self-contained: true
     theme: /Users/ekstrom/ku.scss
 # Modify the title slide    
     title-slide-attributes:
       data-background-image: kulogowhiteq.png
       data-background-size: 30%
       data-background-position: 100% 100%
-#    self-contained: true
-editor: visual
+revealjs-plugins:
+  - attribution      # For attributions along the right-hand side
+editor: source
 ---
 
 ## Quarto
@@ -23,12 +28,21 @@ editor: visual
 Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
 
 
-      data-background-position: 100% 100%;
+Dette er en test
+
+asda
 
 
 ::: aside
-Aside
+Aside asdfasfd 456456
 :::
+
+
+
+::: {.notes}
+Speaker notes go here.
+:::
+
 
 
 ## {background-color="black" background-image="https://placekitten.com/100/100" background-size="100px" background-repeat="repeat"}
