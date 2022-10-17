@@ -19,24 +19,65 @@ format:
       data-background-size: 30%
       data-background-position: 100% 100%
 revealjs-plugins:
-  - attribution      # For attributions along the right-hand side
+  - pointer          # Change cursor to pointer with key q
 editor: source
 ---
 
-## Quarto
+# KU - Quarto 
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+This presentation serves as a skeleton template showing the most (?) common parts of a quarto presentation using the KU template.
+
+It is not meant as a tutorial to quarto. That can be found [elsewhere](https://quarto.org/docs/presentations/revealjs/). The purpose is more to keep an extended example that works with the KU theme for easy reference.
+
+In quarto `:::` is a CSS `div` (at least 3 colons).
+
+[*Speaker notes*]{.yellow} are added to a slide using
 
 
-Dette er en test
+    ::: {.notes}
+    Speaker notes go here.
+    :::
 
-asda
 
-
-::: aside
-Aside asdfasfd 456456
+::: {.notes}
+Speaker notes go here.
 :::
 
+
+# Presenting using quarto
+
+In general: check the help page using [?]{.yellow}
+
+
+### Keys
+
+f - full screen
+o - overview
+b - blackboard
+. - black out
+q - change cursor to pointer
+c - canvas
+m - menu
+s - speaker mode
+
+
+Option - point = zoom
+
+
+
+## Some extensions
+
+The default `ku` template has
+
+
+
+# Extensions
+
+Attributions along the right-hand-edge are created by the attributions extension and with 
+
+::: {.attribution}
+Photo courtesy of [@ingtotheforest](https://unsplash.com/@ingtotheforest)
+:::
 
 
 ::: {.notes}

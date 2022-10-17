@@ -19,6 +19,8 @@ $selection-bg: #e7ad52 !default;
 $input-panel-bg: rgba(233, 236, 239, 0.2) !default;
 $aside-text-color: #222 !default;
 
+$theme-yellow: #ff0000 !default;
+
 // headings
 $presentation-heading-font: "Open Sans", Impact, sans-serif;
 $presentation-heading-letter-spacing: -0.03em;
@@ -39,3 +41,42 @@ $code-block-border-color: rgba(233, 236, 239, 0.5) !default;
     font-size: 50% ;
     transform: rotate(180deg);
 }
+
+
+
+/* Modification to Attribution plugin: text along the right edge of the viewport */
+.attribution {
+  position: absolute;
+  top: 10%;
+  bottom: auto;
+  left: 95%;
+  right: auto;
+  font-size: 0.4em;
+  pointer-events: none;
+  text-align: center;
+  writing-mode: vertical-lr;
+  transform: translate( -50%, -50% ) scale( 100% ) rotate(-180deg);
+}
+
+
+
+
+/*-- scss:rules --*/
+
+.blue {
+//  color: $theme-blue;
+  font-weight: bold;
+}
+
+.yellow {
+  color: $theme-yellow;
+  font-weight: bold;
+}
+
+.red {
+    color: #ff0000;
+  font-weight: bold;
+}
+
+
+
