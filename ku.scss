@@ -31,21 +31,54 @@ $code-block-border-color: rgba(233, 236, 239, 0.5) !default;
 
 
 
-.reveal .slide aside,
-.reveal .slide div.aside {
+.reveal .slide aasdside {
     position: absolute;
     writing-mode: vertical-rl;
-    right: 8px;
-    bottom: 40px;
-    color: #555555 ;
+    right: -100px;
+//    left: auto;
+    bottom: 0px;
+    top: 0%;
+    color: #5555aa ;
     font-size: 50% ;
-    transform: rotate(180deg);
+    text-align: left;    
+    transform: translate( 0%, 0% ) scale( 100% ) rotate(180deg);
+}
+
+// 
+
+
+.reveal .slide .attribution {
+  position: absolute;
+  top: -30%;
+  bottom: auto;
+  left: 102%; // Position along the x axis
+  right: auto;
+  font-size: 0.4em;
+  pointer-events: none;
+  text-align: left;
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
 }
 
 
 
 /* Modification to Attribution plugin: text along the right edge of the viewport */
-.attribution {
+.attributionqq {
+  position: absolute;
+  top: 25%;
+  bottom: auto;
+  left: 95%;
+  right: auto;
+  font-size: 0.4em;
+  pointer-events: none;
+  text-align: left;
+  writing-mode: vertical-rl;
+  transform: scale( 100% ) rotate(-180deg);
+}
+
+
+/* Modification to Attribution plugin: text along the right edge of the viewport */
+.attributionold {
   position: absolute;
   top: 10%;
   bottom: auto;

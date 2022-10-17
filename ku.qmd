@@ -11,6 +11,9 @@ format:
     navigation-mode: vertical
     chalkboard: true
     progress: false
+    controls: false
+    controls-layout: bottom-right
+    controls-tutorial: true    
 #    self-contained: true
     theme: /Users/ekstrom/ku.scss
 # Modify the title slide    
@@ -32,7 +35,6 @@ It is not meant as a tutorial to quarto. That can be found [elsewhere](https://q
 In quarto `:::` is a CSS `div` (at least 3 colons).
 
 [*Speaker notes*]{.yellow} are added to a slide using
-
 
     ::: {.notes}
     Speaker notes go here.
@@ -79,14 +81,25 @@ Attributions along the right-hand-edge are created by the attributions extension
 Photo courtesy of [@ingtotheforest](https://unsplash.com/@ingtotheforest)
 :::
 
+::: {.aside}
+qOy oy Photo courtesy of [@ingtotheforest](https://unsplash.com/@ingtotheforest)
+asd
+:::
+
+
+
+
+
 
 ::: {.notes}
 Speaker notes go here.
 :::
 
 
-
 ## {background-color="black" background-image="https://placekitten.com/100/100" background-size="100px" background-repeat="repeat"}
+
+
+
 
 
 ## Bullets
