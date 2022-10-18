@@ -2,7 +2,7 @@
 title: "Quarto example template"
 subtitle: "Aloha"
 author: "Claus Thorn Ekstrøm"
-date: "September 1st, 2022"
+date: "Sep 1st, 2022"
 format: 
   revealjs:
     width: 1244
@@ -14,6 +14,9 @@ format:
     controls: false
     controls-layout: bottom-right
     controls-tutorial: true    
+    pointer:
+      pointerSize: 18
+      color: '#32cd32'    
 #    self-contained: true
     theme: /Users/ekstrom/ku.scss
 # Modify the title slide    
@@ -46,24 +49,45 @@ Speaker notes go here.
 :::
 
 
-# Presenting using quarto
+# Presenting with quarto
 
-In general: check the help page using [?]{.yellow}
+In general: check the help page using [?]{.button}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+[f]{.button} Full screen<br>
+[s]{.button} Speaker mode<br>
+[o]{.button} Overview<br>
+[.]{.button} Black out
+
+:::
+
+::: {.column width="50%"}
+
+[b]{.button} Blackboard<br>
+[c]{.button} Canvas (draw on current slide)<br>
+[q]{.button} Change cursor to pointer<br>
+(requires extension)
+
+:::
+
+::::
+
+Note: you can **zoom in** on any part using [option]{.button} + left click
 
 
-### Keys
-
-f - full screen
-o - overview
-b - blackboard
-. - black out
-q - change cursor to pointer
-c - canvas
-m - menu
-s - speaker mode
+## Extra
 
 
-Option - point = zoom
+header1 | header2 | header3
+-------|---------|---------
+`fun1` | `code1` | text not formatted as code
+`fun2` | `code2` | another
+`fun3` | `code3` | and again
+
+
 
 
 
@@ -73,23 +97,18 @@ The default `ku` template has
 
 
 
-# Extensions
+# Extensions - nope
 
 Attributions along the right-hand-edge are created by the attributions extension and with 
 
-::: {.attribution}
-Photo courtesy of [@ingtotheforest](https://unsplash.com/@ingtotheforest)
-:::
-
-::: {.aside}
+::: {.caption-right-vertical}
 qOy oy Photo courtesy of [@ingtotheforest](https://unsplash.com/@ingtotheforest)
 asd
 :::
 
+aasasd
 
-
-
-
+transform: scale(0.5) translate(-100%, -100%);
 
 ::: {.notes}
 Speaker notes go here.
