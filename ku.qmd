@@ -1,6 +1,6 @@
 ---
 title: "Quarto example template"
-subtitle: "Aloha"
+subtitle: "With the KU template"
 author: "Claus Thorn Ekstrøm"
 date: "Sep 1st, 2022"
 format: 
@@ -26,12 +26,18 @@ format:
       data-background-position: 100% 100%
 revealjs-plugins:
   - pointer          # Change cursor to pointer with key q
+  - attribution
 editor: source
 ---
 
 # KU - Quarto 
 
-This presentation serves as a skeleton template showing the most (?) common parts of a quarto presentation using the KU template.
+```{r}
+library("tidyverse")
+```
+
+
+This presentation serves as a skeleton template showing some common parts of a quarto presentation using the KU template.
 
 It is not meant as a tutorial to quarto. That can be found [elsewhere](https://quarto.org/docs/presentations/revealjs/). The purpose is more to keep an extended example that works with the KU theme for easy reference.
 
@@ -57,18 +63,18 @@ In general: check the help page using [?]{.button}
 
 ::: {.column width="50%"}
 
-[f]{.button} Full screen<br>
-[s]{.button} Speaker mode<br>
-[o]{.button} Overview<br>
+[F]{.button} Full screen<br>
+[S]{.button} Speaker mode<br>
+[O]{.button} Overview<br>
 [.]{.button} Black out
 
 :::
 
 ::: {.column width="50%"}
 
-[b]{.button} Blackboard<br>
-[c]{.button} Canvas (draw on current slide)<br>
-[q]{.button} Change cursor to pointer<br>
+[B]{.button} Blackboard<br>
+[C]{.button} Canvas (draw on current slide)<br>
+[Q]{.button} Change cursor to pointer<br>
 (requires extension)
 
 :::
@@ -78,8 +84,32 @@ In general: check the help page using [?]{.button}
 Note: you can **zoom in** on any part using [option]{.button} + left click
 
 
-## Extra
 
+# Often used features {background-image="./pics/bambi.gif" background-size="cover"}
+
+
+
+Background images are added to the title header with the `{background-image="..."}` and `background-size="cover"` arguments.
+
+
+::: attribution
+Photo courtesy of [@ingtotheforest](https://unsplash.com/@ingtotheforest)
+:::
+
+## Columns
+
+::: attribution
+Photo courtesy of [@ingtotheforest](https://unsplash.com/@ingtotheforest)
+:::
+
+
+## Tables
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+Manual tables
 
 header1 | header2 | header3
 -------|---------|---------
@@ -87,7 +117,20 @@ header1 | header2 | header3
 `fun2` | `code2` | another
 `fun3` | `code3` | and again
 
+:::
 
+::: {.column width="50%"}
+Generated using `kable`
+
+
+```{r}
+knitr::kable(head(iris, 5), booktabs = TRUE) |>
+  kableExtra::kable_styling()
+```
+
+:::
+
+::::
 
 
 
@@ -95,9 +138,6 @@ header1 | header2 | header3
 
 The default `ku` template has
 
-
-
-# Extensions - nope
 
 Attributions along the right-hand-edge are created by the attributions extension and with 
 
@@ -120,16 +160,7 @@ Speaker notes go here.
 
 
 
-
-## Bullets
-
-When you click the **Render** button a document will be generated that includes:
-
--   Content authored with markdown
--   Output from executable code
-
-
-# Code
+# Code & R
 
 When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
 
@@ -140,6 +171,23 @@ When you click the **Render** button a presentation will be generated that inclu
 ## Hvad med denne
 
 asd asd
+
+This is `inline`
+
+This is a 
+
+    ::: {.notes}
+    Speaker notes go here.
+    :::
+
+
+This is an R chunk
+
+```{r}
+#| echo: true
+2 + 3
+```
+
 
 ## Og denne
 

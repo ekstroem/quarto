@@ -1,14 +1,16 @@
 /*-- scss:defaults --*/
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+// Import fonts
+// @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
-
 @import url('https://fonts.googleapis.com/css?family=Alegreya:400,400i,700,700i|Alegreya+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
-
-// fonts
 $font-family-sans-serif: "Alegreya", sans-serif !default;
+$font-family-monospace:  "Fira Code", monospace !default;
+$font-family-code:  "Fira Code", monospace !default;
 $font-size-root: 220% !default;
+
 // $h1-font-size: 
 
 // colors
@@ -24,17 +26,51 @@ $table-header-bg-color: $main-color;  /* Background color for table headers */
 $table-zebra-bg-light: #999;
 $table-zebra-bg-dark: #666;
 
-
-$theme-yellow: #ff0000 !default;
+// Code
+$code-color: $body-color;
 
 // headings
 $presentation-heading-font: "Open Sans", Impact, sans-serif;
 $presentation-heading-letter-spacing: -0.03em;
 
 // code blocks
-$code-block-border-color: rgba(233, 236, 239, 0.5) !default;
+//$code-block-border-color: rgba(233, 236, 239, 0.5) !default;
+$code-block-border-color: rgba(33, 236, 239, 0.5) !default;
 
 
+
+
+/*-- scss:rules --*/
+
+
+// Adding a few default colours that can be used to emphasize text
+
+
+.blue {
+  color: #0000ff;
+  font-weight: bold;
+}
+
+.yellow {
+  color: #ffff00;
+  font-weight: bold;
+}
+
+.red {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+
+// Fix the font for the R code
+.reveal code {
+    font-family: $font-family-code;
+    font-size: 90% ;
+}
+
+.reveal pre code {
+    font-size: 120% ;
+}
 
 
 .reveal .slide aasdside {
@@ -152,26 +188,3 @@ tbody tr:nth-child(even) {   /* Zebra stipes for tables */
 
 
 
-
-
-/*-- scss:rules --*/
-
-.blue {
-//  color: $theme-blue;
-  font-weight: bold;
-}
-
-.yellow {
-  color: $theme-yellow;
-  font-weight: bold;
-}
-
-.red {
-    color: #ff0000;
-  font-weight: bold;
-}
-
-
-
-
-// Inverse slides
