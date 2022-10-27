@@ -170,8 +170,6 @@ When you click the **Render** button a presentation will be generated that inclu
 
 ## Hvad med denne
 
-asd asd
-
 This is `inline`
 
 This is a 
