@@ -101,18 +101,28 @@ Use `. . .` syntax to indicate a break at an arbitrary location
 
 Also see [this presentation by Tom Mock](https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/presentations) for additional tips and tricks.
 
-## Background images
+## Background images {background-image="pics/beerandsunset.png"
+background-color="black"
+background-opacity=.3
+background-repeat="cover"}
 
-
-Background images are added to the title header with the 
+Background images are set by adding
 
 `{background-image="..."}` 
 
-and 
+with an URL or path to a file and 
 
 `background-size="cover"` 
 
-arguments.
+arguments to the slide header.
+
+Backgrounds can be shaded/tinted by setting
+
+`background-color="black"` or `background-color="white"`
+and
+
+`background-opacity=.5` or some other fraction, respectively.
+
 
 
 ::: attribution
@@ -207,14 +217,10 @@ Speaker notes go here.
 :::
 
 
-## {background-color="black" background-image="https://placekitten.com/100/100" background-size="100px" background-repeat="repeat"}
-
-
-
 
 # Code & R
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+You can embed code like this:
 
 ```{r echo=TRUE}
 1 + 1
@@ -224,11 +230,7 @@ When you click the **Render** button a presentation will be generated that inclu
 
 This is `inline`
 
-This is a 
-
-    ::: {.notes}
-    Speaker notes go here.
-    :::
+ `r 6+7`
 
 
 This is an R chunk
