@@ -9,9 +9,10 @@ format:
     height: 700
     transition: fade
     navigation-mode: vertical
-    chalkboard: true
-    progress: false
-    controls: false
+    slide-number: c               # Set to False to remove slide numbers
+    chalkboard: true              # Set false to remove the chalkboard option
+    progress: false               # Set true to have a progress bar
+    controls: false               # Set true to show slide controls
     controls-layout: bottom-right
     controls-tutorial: true    
     pointer:
@@ -30,7 +31,7 @@ revealjs-plugins:
 editor: source
 ---
 
-# KU - Quarto 
+# KU Quarto - theme
 
 ```{r}
 library("tidyverse")
@@ -41,7 +42,7 @@ This presentation serves as a skeleton template showing some common parts of a q
 
 It is not meant as a tutorial to quarto. That can be found [elsewhere](https://quarto.org/docs/presentations/revealjs/). The purpose is more to keep an extended example that works with the KU theme for easy reference.
 
-In quarto `:::` is a CSS `div` (at least 3 colons).
+In quarto, `:::` is a CSS `div` (3 or more colons).
 
 [*Speaker notes*]{.yellow} are added to a slide using
 
@@ -81,7 +82,7 @@ In general: check the help page using [?]{.button}
 
 ::::
 
-Note: you can **zoom in** on any part using [option]{.button} + left click
+Note: you can **zoom in** on any part using [alt]{.button} + left click
 
 
 
@@ -89,7 +90,29 @@ Note: you can **zoom in** on any part using [option]{.button} + left click
 
 
 
-Background images are added to the title header with the `{background-image="..."}` and `background-size="cover"` arguments.
+## Basic stuff
+
+::: {.class}
+<SOME CONTENT>
+:::
+Some text with a specific [span]{.span-class}
+
+Use `. . .` syntax to indicate a break at an arbitrary location
+
+Also see [this presentation by Tom Mock](https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/presentations) for additional tips and tricks.
+
+## Background images
+
+
+Background images are added to the title header with the 
+
+`{background-image="..."}` 
+
+and 
+
+`background-size="cover"` 
+
+arguments.
 
 
 ::: attribution
@@ -97,6 +120,35 @@ Photo courtesy of [@ingtotheforest](https://unsplash.com/@ingtotheforest)
 :::
 
 ## Columns
+
+
+:::: {.columns}
+
+::: {.column width="35%"}
+
+**Left column**
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+:::
+
+::: {.column width="50%"}
+
+**Middle column**
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+:::
+
+::: {.column width="15%"}
+
+**Right column**
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+:::
+
+::::
 
 ::: attribution
 Photo courtesy of [@ingtotheforest](https://unsplash.com/@ingtotheforest)
@@ -225,3 +277,4 @@ p <- ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point(size=3) +
   theme(text=element_text(size=16, family="Comic Sans MS"))
 p
 ```
+
