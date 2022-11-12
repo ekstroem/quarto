@@ -220,30 +220,62 @@ Speaker notes go here.
 
 # Code & R
 
-You can embed code like this:
-
-```{r echo=TRUE}
-1 + 1
-```
-
-## Hvad med denne
-
-This is `inline`
-
- `r 6+7`
-
-
-This is an R chunk
+Code is embedded in standard Rmarkdown chunks. By default `echo=FALSE` or inline as here: `r 6+7`
 
 ```{r}
-#| echo: true
-2 + 3
+#| echo: TRUE
+#| eval: FALSE
+#| code-line-numbers: "2,4"
+1 + 1
+sqrt(5)+1
+x <- 1:10
+LETTERS[x]
 ```
+
+Highlight specific lines using e.g., `#| code-line-numbers: "2,4"`.
+
+Show only some lines of code by setting, e.g., `#| echo: c(2:3)`
+
+
+output-location
+
 
 
 ## Og denne
 
-asd asd asd
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-fold: show
+#| code-line-numbers: "2"
+#| code-summary: "Show the code"
+#| code-block-border-left: true
+1 + 1
+sqrt(5)+1
+x <- 1:10
+LETTERS[x]
+```
+
+or code-show true
+
+## Og denne
+
+
+```{r}
+#| echo: TRUE
+#| code-fold: show
+#| code-line-numbers: "2"
+#| code-summary: "Show the code"
+#| code-block-border-left: true
+1 + 1
+sqrt(5)+1
+x <- 1:10
+LETTERS[x]
+```
+
+or code-show true
+
 
 # Og så
 
@@ -280,3 +312,27 @@ p <- ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point(size=3) +
 p
 ```
 
+
+# Extensions
+
+
+
+
+To use an extension you need to install it for each of the Quarto projects you want to use it for
+
+
+## Font Awesome
+
+Install extension with
+
+    quarto install extension quarto-ext/fontawesome
+
+Surround the Font Awesome icon name in `{{<` and `>}}` to obtain
+
+{{< fa brands apple >}}
+
+or even coloured
+
+[{{< fa user-doctor >}}]{.yellow}
+
+The full list of [Font Awesome icons supported is shown here](https://fontawesome.com/search?m=free).
