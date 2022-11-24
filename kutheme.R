@@ -2,16 +2,10 @@ library("extrafont")
 loadfonts()
 library("ggplot2")
 library("ggthemr")
-#library("xaringanExtra")
 
-#xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "scribble"))
+# Set options about figure size and transparent background
+knitr::opts_chunk$set(dev.args=list(bg="transparent"), fig.width=16, fig.height=7)
 
-#xaringanExtra::use_tile_view()
-
-#xaringanExtra::use_extra_styles(
-#  hover_code_line = TRUE         #<<
-#  mute_unhighlighted_code = TRUE 
-#)
 
 ku_colours <- c('#eeeeee', # White
                 "#8282ff", # Blue b9b9ff
@@ -43,14 +37,37 @@ get_theme_palette <- function() {
 
 # Set the default font for graphics
 #default_font_name <- "Lato"
-default_font_name <- "Alegreya Sans"
-default_font_size <- 35
+default_font_name <- "Alegreya" ; default_font_size <- 30
+default_font_name <- "Alegreya Sans" ; default_font_size <- 32
+default_font_name <- "Komika Hand"; default_font_size <- 22
+
 
 ggthemr::ggthemr(get_theme_palette())
 
 scale_colour_discrete <- function(...) scale_colour_manual(values=ku_colours)
 
 # scale_colour_manual(values=ku_colours)
+
+
+theme_ku_quarto <- function() {
+    ggplot2::theme_grey(
+             ) +
+        theme(text = element_text(size=default_font_size, family=default_font_name, colour="#eeeeee"),   # Handwritten font with ÆØÅ
+              line = element_line(colour = "#eeeeee", size = 1, linetype = 1, lineend = "butt"),
+              rect = element_rect(fill = "#16161d", colour = "#eeeeee", size = 0.5, linetype = 1),
+              panel.background = element_rect(fill = "transparent", colour = NA), # bg of the panel
+              plot.background = element_rect(fill = "transparent", colour = NA), # bg of the plot
+
+              axis.text = element_text(colour="#eeeeee", size=default_font_size),   # Colour of axis labels
+              axis.line = element_line(size=2, colour="#dddddd"),    # Colour of axis lines
+
+#              axis.text.y=element_text(vjust=5, hjust=5),
+
+              panel.grid = element_line(size=1, colour="#434343"), # Gridlines inside picture
+              legend.key = element_rect(fill="#16161d", colour=NA)              
+         )
+}
+
 
 theme_xkcd <- function() {
     ggplot2::theme_grey(
@@ -92,14 +109,14 @@ theme_xkcd_old <- function() {
 
 
 
-xkcd_line <- function(...) {
-    geom_line(...)
-}
+#xkcd_line <- function(...) {
+#    geom_line(...)
+#}
 
-update_geom_defaults("text", list(family=default_font_name))
+#update_geom_defaults("text", list(family=default_font_name))
 
 
 theme_set(
-  theme_xkcd()
+  theme_ku_quarto()
 )
 

@@ -34,7 +34,9 @@ editor: source
 # KU Quarto - theme
 
 ```{r}
+#| echo: false
 library("tidyverse")
+source("kutheme.R")   # Get the theme
 ```
 
 
@@ -291,31 +293,28 @@ claus <- define_palette(swatch = c('#eeeeee', '#901A1E', 'lightblue', 'green', '
                         gridline = "#434343") # Gridlines
 
 
-ggthemr(claus, layout="scientific", type = 'outer', spacing=1.2)
+#ggthemr(claus, layout="scientific", type = 'outer', spacing=1.2)
 
 mpg_plot <- ggplot(mpg[mpg$drv != '4', ], aes(factor(cyl), cty, fill = drv)) + 
   geom_boxplot() + labs(x = 'Cylinders', y = 'City MPG', fill = 'Drive Type') +
-  theme(legend.position = 'bottom')
+  theme(legend.position = 'bottom') #+ theme_xkcd()
 mpg_plot
 ```
 
 ## Graphics - ggplot2
 
+
 ```{r echo=FALSE,message=FALSE, warning=FALSE, error=FALSE}
-library(extrafont)
-loadfonts()
-library(ggplot2)
 p <- ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point(size=3) +
-  ggtitle("Fuel Efficiency of 32 Cars") +
-  xlab("Weight (x1000 lb)") + ylab("Miles per Gallon") +
-  theme(text=element_text(size=16, family="Comic Sans MS"))
+  ggtitle("Fuel Efficiency of 232 Cars æøå ÆØÅ") +
+  xlab("Weight (x1000 lb)") + ylab("Miles per Gallon") 
+##+
+##  theme(text=element_text(size=16, family="Comic Sans MS"))
 p
 ```
 
 
 # Extensions
-
-
 
 
 To use an extension you need to install it for each of the Quarto projects you want to use it for
