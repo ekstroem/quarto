@@ -222,7 +222,9 @@ Speaker notes go here.
 
 # Code & R
 
-Code is embedded in standard Rmarkdown chunks. By default `echo=FALSE` or inline as here: `r 6+7`
+Code is embedded in standard Rmarkdown chunks. 
+
+By default `echo=FALSE` or inline as here: `r 6+7`
 
 ```{r}
 #| echo: TRUE
@@ -239,7 +241,7 @@ Highlight specific lines using e.g., `#| code-line-numbers: "2,4"`.
 Show only some lines of code by setting, e.g., `#| echo: c(2:3)`
 
 
-output-location
+[output-code highlighting missing]{.yellow}
 
 
 
@@ -251,7 +253,7 @@ output-location
 #| eval: FALSE
 #| code-fold: show
 #| code-line-numbers: "2"
-#| code-summary: "Show the code"
+#| code-summary: "Show me the code"
 #| code-block-border-left: true
 1 + 1
 sqrt(5)+1
