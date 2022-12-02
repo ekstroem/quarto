@@ -1,0 +1,65 @@
+---
+title: "Quarto example template"
+subtitle: "With the KU template"
+author: "Claus Thorn Ekstrøm"
+date: "Sep 1st, 2022"
+format: 
+  revealjs:
+    width: 1244
+    height: 700
+    transition: fade
+    navigation-mode: vertical
+    slide-number: c               # Set to False to remove slide numbers
+    chalkboard: true              # Set false to remove the chalkboard option
+    progress: false               # Set true to have a progress bar
+    controls: false               # Set true to show slide controls
+    controls-layout: bottom-right
+    controls-tutorial: true    
+    pointer:
+      pointerSize: 18
+      color: '#32cd32'    
+#    self-contained: true
+    theme: /Users/ekstrom/ku.scss
+# Modify the title slide    
+    title-slide-attributes:
+      data-background-image: kulogowhiteq.png
+      data-background-size: 30%
+      data-background-position: 100% 100%
+revealjs-plugins:
+  - pointer          # Change cursor to pointer with key q
+  - attribution
+editor: source
+---
+
+# KU Quarto - theme
+
+```{r}
+#| echo: false
+library("tidyverse")
+source("kutheme.R")   # Get the theme
+```
+
+
+This presentation serves as a skeleton template showing some common parts of a quarto presentation using the KU template.
+
+It is not meant as a tutorial to quarto. That can be found [elsewhere](https://quarto.org/docs/presentations/revealjs/). The purpose is more to keep an extended example that works with the KU theme for easy reference.
+
+In quarto, `:::` is a CSS `div` (3 or more colons).
+
+[*Speaker notes*]{.yellow} are added to a slide using
+
+    ::: {.notes}
+    Speaker notes go here.
+    :::
+
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+
+# iframe background {background-iframe="iframe/index.html"}
+
+
+# iframe background 2 {background-iframe="iframe2/index.html"}
+
