@@ -1,5 +1,5 @@
 ---
-title: "Quarto example template"
+title: "Fancy Quarto example template"
 subtitle: "With the KU template"
 author: "Claus Thorn Ekstrøm"
 date: "Sep 1st, 2022"

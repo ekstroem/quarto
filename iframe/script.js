@@ -6,16 +6,21 @@ var gl = canvas.getContext('webgl');
 
 var mouse = {x: 0, y: 0};
 
-var numMetaballs = 30;
+// Number of bubbles
+// CE: 30 -> 25
+var numMetaballs = 25;
 var metaballs = [];
+
+// CE: 3 -> 1
+var moveSpeed = 1.5;
 
 for (var i = 0; i < numMetaballs; i++) {
   var radius = Math.random() * 60 + 10;
   metaballs.push({
     x: Math.random() * (width - 2 * radius) + radius,
     y: Math.random() * (height - 2 * radius) + radius,
-    vx: (Math.random() - 0.5) * 3,
-    vy: (Math.random() - 0.5) * 3,
+    vx: (Math.random() - 0.5) * moveSpeed,
+    vy: (Math.random() - 0.5) * moveSpeed,
     r: radius * 0.75
   });
 }
@@ -53,7 +58,12 @@ sum += (radius * radius) / (dx * dx + dy * dy);
 }
 
 if (sum >= 0.99) {
-gl_FragColor = vec4(mix(vec3(x / WIDTH, y / HEIGHT, 1.0), vec3(0, 0, 0), max(0.0, 1.0 - (sum - 0.99) * 100.0)), 1.0);
+// vec3(x / WIDTH / 5.0, y / HEIGHT / 5.0, 1.0),
+// CE: sets KU colour only
+gl_FragColor = vec4(mix(vec3(0.56 * x/WIDTH, 0.10 * y/HEIGHT, 0.12 * x/WIDTH),
+                        vec3(0.0, 0.0, 0),
+                        max(0.0, 1.0 - (sum - 0.99) * 100.0)),
+                    1.0);
 return;
 }
 
