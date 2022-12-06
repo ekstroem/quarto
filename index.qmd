@@ -22,7 +22,7 @@ format:
     theme: /Users/ekstrom/ku.scss
 # Modify the title slide    
     title-slide-attributes:
-      data-background-image: kulogowhiteq.png
+      data-background-image: kulogo.png
       data-background-size: 30%
       data-background-position: 100% 100%
 revealjs-plugins:
