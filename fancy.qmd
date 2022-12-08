@@ -57,8 +57,17 @@ In quarto, `:::` is a CSS `div` (3 or more colons).
 Speaker notes go here.
 :::
 
-
 # iframe background {background-iframe="iframe/index.html"}
+
+
+```{r echo=FALSE,warning=FALSE}
+library(ggplot2)
+
+mpg_plot <- ggplot(mpg[mpg$drv != '4', ], aes(factor(cyl), cty, fill = drv)) + 
+  geom_boxplot() + labs(x = 'Cylinders', y = 'City MPG', fill = 'Drive Type') +
+  theme(legend.position = 'bottom') #+ theme_xkcd()
+mpg_plot
+```
 
 
 # iframe background 2 {background-iframe="iframe2/index.html"}

@@ -285,17 +285,6 @@ or code-show true
 
 ```{r echo=FALSE,warning=FALSE}
 library(ggplot2)
-library(ggthemr)
-
-claus <- define_palette(swatch = c('#eeeeee', '#901A1E', 'lightblue', 'green', 'blue', 'brown', 'purple', 'yellow'), 
-  gradient = c(lower = 'red', upper = 'green'),
-                        background = "#16161d", 
-                        text = c("#eeeeee", "#eeeeee"), 
-                        line = c("#ee1e1e", "#6e6e6e"), # Axis lines 
-                        gridline = "#434343") # Gridlines
-
-
-#ggthemr(claus, layout="scientific", type = 'outer', spacing=1.2)
 
 mpg_plot <- ggplot(mpg[mpg$drv != '4', ], aes(factor(cyl), cty, fill = drv)) + 
   geom_boxplot() + labs(x = 'Cylinders', y = 'City MPG', fill = 'Drive Type') +
