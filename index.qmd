@@ -2,7 +2,8 @@
 title: "Quarto example template"
 subtitle: "With the KU template"
 author: "Claus Thorn Ekstrøm"
-date: "Sep 1st, 2022"
+date: 2022-09-01
+date-format: long
 format: 
   revealjs:
     width: 1244
