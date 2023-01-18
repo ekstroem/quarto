@@ -285,20 +285,30 @@ or code-show true
 # Og så
 
 ```{r echo=FALSE,warning=FALSE}
-library(ggplot2)
+mpg_plot2 <- ggplot(mpg[mpg$drv != '4', ], aes(factor(cyl), cty, fill = drv)) + 
+  geom_boxplot() +
+  labs(title="Here is a **title**",
+       subtitle = 'Either <span style="color:#EE0000">route I</span> or <span style="color:#0000EE">route I+II</span>.',
+       x = 'Cylinders', y = 'City MPG', fill = 'Drive Type') + theme(
+              plot.title=element_markdown(),
+              plot.subtitle=element_markdown()
+    ) 
 
-mpg_plot <- ggplot(mpg[mpg$drv != '4', ], aes(factor(cyl), cty, fill = drv)) + 
-  geom_boxplot() + labs(x = 'Cylinders', y = 'City MPG', fill = 'Drive Type') +
-  theme(legend.position = 'bottom') #+ theme_xkcd()
-mpg_plot
+
+mpg_plot2
+
 ```
+
 
 ## Graphics - ggplot2
 
 
 ```{r echo=FALSE,message=FALSE, warning=FALSE, error=FALSE}
+
 p <- ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point(size=3) +
-  ggtitle("Fuel Efficiency of 232 Cars æøå ÆØÅ") +
+  labs(title="Fuel Efficiency of 232 Cars",
+       subtitle = "Using æøå ÆØÅ",
+       caption = "And a caption") +
   xlab("Weight (x1000 lb)") + ylab("Miles per Gallon") 
 ##+
 ##  theme(text=element_text(size=16, family="Comic Sans MS"))
@@ -306,8 +316,8 @@ p
 ```
 
 
-# Extensions
 
+# Extensions
 
 To use an extension you need to install it for each of the Quarto projects you want to use it for
 

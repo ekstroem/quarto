@@ -2,9 +2,11 @@ library("extrafont")
 loadfonts()
 library("ggplot2")
 library("ggthemr")
+library("ggtext")
+
 
 # Set options about figure size and transparent background
-knitr::opts_chunk$set(dev.args=list(bg="transparent"), fig.width=16, fig.height=7)
+knitr::opts_chunk$set(dev.args=list(bg="transparent"), fig.width=24, fig.height=11)
 
 
 ku_colours <- c('#eeeeee', # White
@@ -37,9 +39,9 @@ get_theme_palette <- function() {
 
 # Set the default font for graphics
 #default_font_name <- "Lato"
-default_font_name <- "Alegreya" ; default_font_size <- 30
+default_font_name <- "Alegreya" ;      default_font_size <- 30
 default_font_name <- "Alegreya Sans" ; default_font_size <- 32
-default_font_name <- "Komika Hand"; default_font_size <- 22
+default_font_name <- "Komika Hand" ;   default_font_size <- 32 ; default_font_title_size <- round(default_font_size*1.4)
 
 
 ggthemr::ggthemr(get_theme_palette())
@@ -61,9 +63,16 @@ theme_ku_quarto <- function() {
               axis.text = element_text(colour="#eeeeee", size=default_font_size),   # Colour of axis labels
               axis.line = element_line(size=2, colour="#dddddd"),    # Colour of axis lines
 
-#              axis.text.y=element_text(vjust=5, hjust=5),
+              plot.title=element_markdown(size=default_font_title_size),
+              plot.subtitle=element_markdown(),
+              plot.caption=element_markdown(),
+	      
+              panel.grid.major.y = element_line(size=1, colour="#232323"), # Gridlines inside picture
+              panel.grid.major.x = element_blank(),	      
+              panel.grid.minor = element_blank(),
+              panel.border = element_blank(),
 
-              panel.grid = element_line(size=1, colour="#434343"), # Gridlines inside picture
+              legend.position = "none",    # Default no legend
               legend.key = element_rect(fill="#16161d", colour=NA)              
          )
 }
@@ -77,6 +86,7 @@ theme_xkcd <- function() {
               rect = element_rect(fill = "#16161d", colour = "#eeeeee", size = 0.5, linetype = 1),
               panel.background = element_rect(fill = "transparent", colour = NA), # bg of the panel
               plot.background = element_rect(fill = "transparent", colour = NA), # bg of the plot
+
 
               axis.text = element_text(colour="#eeeeee", size=default_font_size),   # Colour of axis labels
               axis.line = element_line(size=2, colour="#dddddd"),    # Colour of axis lines
