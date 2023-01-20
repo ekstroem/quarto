@@ -92,6 +92,16 @@ Note: you can **zoom in** on any part using [alt]{.button} + left click
 # Often used features {background-image="./pics/bambi.gif" background-size="cover"}
 
 
+## asdasd
+asd
+asd
+asd
+as
+das
+dasd
+
+
+
 
 ## Basic stuff
 
@@ -284,11 +294,12 @@ or code-show true
 
 # Og så
 
+
 ```{r echo=FALSE,warning=FALSE}
 mpg_plot2 <- ggplot(mpg[mpg$drv != '4', ], aes(factor(cyl), cty, fill = drv)) + 
   geom_boxplot() +
   labs(title="Here is a **title**",
-       subtitle = 'Either <span style="color:#EE0000">route I</span> or <span style="color:#0000EE">route I+II</span>.',
+       subtitle = paste0('Either <span style="color:', ku_colours[2], '">route I</span> or <span style="color:', ku_colours[3], '">route I+II</span>.'),
        x = 'Cylinders', y = 'City MPG', fill = 'Drive Type') + theme(
               plot.title=element_markdown(),
               plot.subtitle=element_markdown()

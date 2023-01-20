@@ -1,7 +1,9 @@
-library("extrafont")
-loadfonts()
+#library("extrafont")
+#loadfonts()
+
 library("ggplot2")
 library("ggthemr")
+library("ragg")
 library("ggtext")
 
 
@@ -64,11 +66,11 @@ theme_ku_quarto <- function() {
               axis.line = element_line(size=2, colour="#dddddd"),    # Colour of axis lines
 
               plot.title=element_markdown(size=default_font_title_size),
-              plot.subtitle=element_markdown(),
-              plot.caption=element_markdown(),
+              plot.subtitle= element_markdown(colour="#bbbbbb"),
+              plot.caption = element_markdown(colour="#bbbbbb"),
 	      
               panel.grid.major.y = element_line(size=1, colour="#232323"), # Gridlines inside picture
-              panel.grid.major.x = element_blank(),	      
+              panel.grid.major.x = element_blank(),	                   # 
               panel.grid.minor = element_blank(),
               panel.border = element_blank(),
 
