@@ -20,15 +20,6 @@ ku_colours <- c('#eeeeee', # White
                 "#ffad5b"  # Brownish
                 )
 
-ku_colours <- c('#eeeeee', # White
-                "#8282ff", # Blue b9b9ff
-                "#ff7979", # Red
-                '#f2f200', # Yellow
-                "#0bff06", # Green
-                "#eca8e5", # Magenta
-                "#ffad5b"  # Brownish
-                )
-
 
 get_theme_palette <- function() {
 
@@ -39,11 +30,21 @@ get_theme_palette <- function() {
     
 }
 
+######
+#
+# Fonts
 # Set the default font for graphics
 #default_font_name <- "Lato"
-default_font_name <- "Alegreya" ;      default_font_size <- 30
-default_font_name <- "Alegreya Sans" ; default_font_size <- 32
+#default_font_name <- "Alegreya" ;      default_font_size <- 30
+#default_font_name <- "Alegreya Sans" ; default_font_size <- 32
+
 default_font_name <- "Komika Hand" ;   default_font_size <- 32 ; default_font_title_size <- round(default_font_size*1.4)
+
+#library("systemfonts")
+#register_variant(
+#  name = ""
+#)
+
 
 
 ggthemr::ggthemr(get_theme_palette())
@@ -54,16 +55,15 @@ scale_colour_discrete <- function(...) scale_colour_manual(values=ku_colours)
 
 
 theme_ku_quarto <- function() {
-    ggplot2::theme_grey(
-             ) +
-        theme(text = element_text(size=default_font_size, family=default_font_name, colour="#eeeeee"),   # Handwritten font with ÆØÅ
+    ggplot2::theme_grey(base_size=default_font_size) +
+        theme(text = element_text(family=default_font_name, colour="#eeeeee"),   # Handwritten font with ÆØÅ
               line = element_line(colour = "#eeeeee", size = 1, linetype = 1, lineend = "butt"),
               rect = element_rect(fill = "#16161d", colour = "#eeeeee", size = 0.5, linetype = 1),
               panel.background = element_rect(fill = "transparent", colour = NA), # bg of the panel
               plot.background = element_rect(fill = "transparent", colour = NA), # bg of the plot
 
               axis.text = element_text(colour="#eeeeee", size=default_font_size),   # Colour of axis labels
-              axis.line = element_line(size=2, colour="#dddddd"),    # Colour of axis lines
+              axis.line = element_line(size=2, colour="#dddddd"),                   # Colour of axis lines
 
               plot.title=element_markdown(size=default_font_title_size),
               plot.subtitle= element_markdown(colour="#bbbbbb"),
@@ -80,55 +80,14 @@ theme_ku_quarto <- function() {
 }
 
 
-theme_xkcd <- function() {
-    ggplot2::theme_grey(
-             ) +
-        theme(text = element_text(size=default_font_size, family=default_font_name, colour="#eeeeee"),   # Handwritten font with ÆØÅ
-              line = element_line(colour = "#eeeeee", size = 1, linetype = 1, lineend = "butt"),
-              rect = element_rect(fill = "#16161d", colour = "#eeeeee", size = 0.5, linetype = 1),
-              panel.background = element_rect(fill = "transparent", colour = NA), # bg of the panel
-              plot.background = element_rect(fill = "transparent", colour = NA), # bg of the plot
-
-
-              axis.text = element_text(colour="#eeeeee", size=default_font_size),   # Colour of axis labels
-              axis.line = element_line(size=2, colour="#dddddd"),    # Colour of axis lines
-
-#              axis.text.y=element_text(vjust=5, hjust=5),
-
-              panel.grid = element_line(size=1, colour="#434343"), # Gridlines inside picture
-              legend.key = element_rect(fill="#16161d", colour=NA)              
-         )
-}
-
-theme_xkcd_old <- function() {
-    ggplot2::theme_grey(
-             ) +
-        theme(text = element_text(size=34, family=default_font_name, colour="#eeeeee"),   # Handwritten font with ÆØÅ
-              line = element_line(colour = "#eeeeee", size = 1, linetype = 1, lineend = "butt"),
-              rect = element_rect(fill = "#16161d", colour = "#eeeeee", size = 0.5, linetype = 1),
-              panel.background = element_rect(fill = "transparent", colour = NA), # bg of the panel
-              plot.background = element_rect(fill = "transparent", colour = NA), # bg of the plot
-
-              axis.text = element_text(colour="#eeeeee", size=34),   # Colour of axis labels
-              axis.line = element_line(size=2, colour="#dddddd"),    # Colour of axis lines
-
-#              axis.text.y=element_text(vjust=5, hjust=5),
-
-              panel.grid = element_line(size=1, colour="#434343"), # Gridlines inside picture
-              legend.key = element_rect(fill="#16161d", colour=NA)              
-         )
-}
-
-
-
-#xkcd_line <- function(...) {
-#    geom_line(...)
-#}
-
-#update_geom_defaults("text", list(family=default_font_name))
 
 
 theme_set(
   theme_ku_quarto()
 )
+
+
+update_geom_defaults("text", list(family = theme_get()$text$family,
+                                  size = default_font_size* 5/14)    # This horrile hack is because one size unit is in pixels and the other is in mm
+				  )
 

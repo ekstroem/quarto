@@ -323,7 +323,9 @@ p <- ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point(size=3) +
   xlab("Weight (x1000 lb)") + ylab("Miles per Gallon") 
 ##+
 ##  theme(text=element_text(size=16, family="Comic Sans MS"))
-p
+p + 
+  annotate(geom="text", x=3.8, y=27, label="Look at this", hjust="left") + 
+  annotate(geom="curve", x=3.7, y=27, xend=3.25, yend=25.2, curvature = .3, arrow=arrow(length = unit(4, "mm")), col="white", size=2)
 ```
 
 
