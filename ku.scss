@@ -21,6 +21,7 @@ $link-color: #901A1E !default;
 $selection-bg: #e7ad52 !default;
 $input-panel-bg: rgba(233, 236, 239, 0.2) !default;
 $aside-text-color: #222 !default;
+$gray-color: #BBBBBB !default;
 
 $table-header-bg-color: $main-color;  /* Background color for table headers */
 $table-zebra-bg-light: #999;
@@ -194,6 +195,7 @@ tbody tr:nth-child(even) {   /* Zebra stipes for tables */
 
 
 
-
-
-
+details > summary {    
+    font-size: 50%;
+    color: $gray-color ! important;
+}

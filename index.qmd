@@ -4,11 +4,17 @@ subtitle: "With the KU template"
 author: "Claus Thorn Ekstrøm"
 date: 2022-09-01
 date-format: long
+execute:
+  error: false
+  warning: false
 format: 
   revealjs:
     width: 1244
     height: 700
+    center: false                 # Do NOT center (vertical) lvl 2 slides
     transition: fade
+    fig-format: svg
+    fig-align: center
     navigation-mode: vertical
     slide-number: c               # Set to False to remove slide numbers
     chalkboard: true              # Set false to remove the chalkboard option
@@ -59,6 +65,7 @@ Speaker notes go here.
 :::
 
 
+
 # Presenting with quarto
 
 In general: check the help page using [?]{.button}
@@ -90,17 +97,6 @@ Note: you can **zoom in** on any part using [alt]{.button} + left click
 
 
 # Often used features {background-image="./pics/bambi.gif" background-size="cover"}
-
-
-## asdasd
-asd
-asd
-asd
-as
-das
-dasd
-
-
 
 
 ## Basic stuff
@@ -276,7 +272,6 @@ or code-show true
 
 ## Og denne
 
-
 ```{r}
 #| echo: TRUE
 #| code-fold: show
@@ -289,13 +284,15 @@ x <- 1:10
 LETTERS[x]
 ```
 
-or code-show true
+or `code-show true`
 
 
-# Og så
 
+# Graphics
 
 ```{r echo=FALSE,warning=FALSE}
+#| out-width: 100%
+#| fig-height: 10
 mpg_plot2 <- ggplot(mpg[mpg$drv != '4', ], aes(factor(cyl), cty, fill = drv)) + 
   geom_boxplot() +
   labs(title="Here is a **title**",
@@ -314,7 +311,12 @@ mpg_plot2
 ## Graphics - ggplot2
 
 
-```{r echo=FALSE,message=FALSE, warning=FALSE, error=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+#| echo: false
+#| fig-align: center
+#| fig-width: 20
+#| fig-height: 10
+#| out-width: 100%
 
 p <- ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point(size=3) +
   labs(title="Fuel Efficiency of 232 Cars",
@@ -327,6 +329,16 @@ p +
   annotate(geom="text", x=3.8, y=27, label="Look at this", hjust="left") + 
   annotate(geom="curve", x=3.7, y=27, xend=3.25, yend=25.2, curvature = .3, arrow=arrow(length = unit(4, "mm")), col="white", size=2)
 ```
+
+## {}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-width: 20
+p
+```
+
 
 
 

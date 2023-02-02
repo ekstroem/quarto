@@ -8,7 +8,7 @@ library("ggtext")
 
 
 # Set options about figure size and transparent background
-knitr::opts_chunk$set(dev.args=list(bg="transparent"), fig.width=24, fig.height=11)
+knitr::opts_chunk$set(dev.args=list(bg="transparent"), fig.width=20, fig.height=11.25)
 
 
 ku_colours <- c('#eeeeee', # White
@@ -38,7 +38,7 @@ get_theme_palette <- function() {
 #default_font_name <- "Alegreya" ;      default_font_size <- 30
 #default_font_name <- "Alegreya Sans" ; default_font_size <- 32
 
-default_font_name <- "Komika Hand" ;   default_font_size <- 32 ; default_font_title_size <- round(default_font_size*1.4)
+default_font_name <- "Komika Jam" ;   default_font_size <- 38 ; default_font_title_size <- round(default_font_size*1.4)
 
 #library("systemfonts")
 #register_variant(
@@ -88,6 +88,6 @@ theme_set(
 
 
 update_geom_defaults("text", list(family = theme_get()$text$family,
-                                  size = default_font_size* 5/14)    # This horrile hack is because one size unit is in pixels and the other is in mm
+                                  size = default_font_size* 5/14)    # This horrible hack is because one size unit is in pixels and the other is in mm
 				  )
 
