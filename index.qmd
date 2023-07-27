@@ -21,7 +21,8 @@ format:
     progress: false               # Set true to have a progress bar
     controls: false               # Set true to show slide controls
     controls-layout: bottom-right
-    controls-tutorial: true    
+    controls-tutorial: true
+    html-math-method: mathjax    
     pointer:
       pointerSize: 18
       color: '#32cd32'    
@@ -318,6 +319,10 @@ mpg_plot2
 #| fig-height: 10
 #| out-width: 100%
 
+#| fig.width: 12
+#| fig.asp: .4
+#| out.width: "100%"
+
 p <- ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point(size=3) +
   labs(title="Fuel Efficiency of 232 Cars",
        subtitle = "Using æøå ÆØÅ",
@@ -336,6 +341,11 @@ p +
 #| echo: false
 #| fig-align: center
 #| fig-width: 20
+
+#| fig.width: 12
+#| fig.asp: .4
+#| out.width: "100%"
+
 p
 ```
 
