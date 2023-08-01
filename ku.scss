@@ -67,6 +67,19 @@ $code-block-border-color: rgba(33, 236, 239, 0.5) !default;
   font-weight: bold;
 }
 
+
+/* Font sizes   */
+
+.Large { font-size: 144% }
+.large { font-size: 120% }
+.small { font-size: 90% }
+.footnotesize { font-size: 80% }
+.scriptsize { font-size: 70% }
+.tiny { font-size: 60% }
+
+
+
+
 .subtitle {
     font-size: 160%;
 }
