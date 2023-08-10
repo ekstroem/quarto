@@ -4,6 +4,7 @@ subtitle: "With the KU template"
 author: "Claus Thorn Ekstrøm"
 date: 2022-09-01
 date-format: long
+embed-resources: false	      	  # Set	to true	to create a shareable, embedded	html-file
 format: 
   revealjs:
     width: 1244
