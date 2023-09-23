@@ -115,7 +115,7 @@ Also see [this presentation by Tom Mock](https://rstudio-conf-2022.github.io/get
 ## Background images {background-image="pics/beerandsunset.png"
 background-color="black"
 background-opacity=.3
-background-repeat="cover"}
+background-size="cover"}
 
 Background images are set by adding
 
