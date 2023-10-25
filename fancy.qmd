@@ -42,8 +42,6 @@ editor: source
 
 # Aloha
 
-
-
 # KU Quarto - theme
 
 ```{r}
@@ -95,8 +93,6 @@ It is not meant as a tutorial to quarto. That can be found [elsewhere](https://q
 In quarto, `:::` is a CSS `div` (3 or more colons).
 
 [*Speaker notes*]{.yellow} are added to a slide using
-
-
 
 
 # iframe background {background-iframe="iframe/index.html"}

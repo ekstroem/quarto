@@ -2,8 +2,8 @@
 
 // Import fonts
 // @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
-@import url('https://fonts.googleapis.com/css?family=Alegreya:400,400i,700,700i|Alegreya+Sans');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700,800,400italic,700italic);
+@import url('https://fonts.googleapis.com/css?family=Alegreya:400,400i,600,700,800,700i|Alegreya+Sans');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 $font-family-sans-serif: "Alegreya", sans-serif !default;
@@ -33,8 +33,8 @@ $code-color: $body-color;
 
 // Headings
 $presentation-heading-font: "Open Sans", Impact, sans-serif;
-$presentation-heading-letter-spacing: 1.15em;
-$presentation-heading-font-weight: 600;
+$presentation-heading-letter-spacing: -0.05em;
+$presentation-heading-font-weight: 500;
 
 // code blocks
 //$code-block-border-color: rgba(233, 236, 239, 0.5) !default;
@@ -80,9 +80,12 @@ $code-block-border-color: rgba(33, 236, 239, 0.5) !default;
 
 
 
+.title {
+    font-size: 150%
+}
 
 .subtitle {
-    font-size: 160%;
+    font-size: 150%;
 }
 
 
@@ -98,11 +101,11 @@ $code-block-border-color: rgba(33, 236, 239, 0.5) !default;
 
 
 .reveal h1 {
-    letter-spacing: -0.0325em;
+//    letter-spacing: -0.0325em;
 }
 
 .reveal h2 {
-    letter-spacing: -0.0325em;
+//    letter-spacing: -0.0325em;
 }
 
 
