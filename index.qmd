@@ -2,7 +2,7 @@
 title: "Quarto example template"
 subtitle: "With the KU template"
 author: "Claus Thorn Ekstrøm"
-date: 2022-09-01
+date: 2023-09-01
 date-format: long
 execute:
   error: false

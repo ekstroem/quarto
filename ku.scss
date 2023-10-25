@@ -9,7 +9,8 @@
 $font-family-sans-serif: "Alegreya", sans-serif !default;
 $font-family-monospace:  "Fira Code", monospace !default;
 $font-family-code:  "Fira Code", monospace !default;
-$font-size-root: 220% !default;
+$presentation-font-size-root: 45px !default;
+$presentation-title-font-size-root: 4px !default;
 
 // $h1-font-size: 
 
@@ -30,14 +31,14 @@ $table-zebra-bg-dark: #666;
 // Code
 $code-color: $body-color;
 
-// headings
+// Headings
 $presentation-heading-font: "Open Sans", Impact, sans-serif;
-$presentation-heading-letter-spacing: -0.03em;
+$presentation-heading-letter-spacing: 1.15em;
+$presentation-heading-font-weight: 600;
 
 // code blocks
 //$code-block-border-color: rgba(233, 236, 239, 0.5) !default;
 $code-block-border-color: rgba(33, 236, 239, 0.5) !default;
-
 
 
 
