@@ -34,7 +34,7 @@ $code-color: $body-color;
 // Headings
 $presentation-heading-font: "Open Sans", Impact, sans-serif;
 $presentation-heading-letter-spacing: -0.05em;
-$presentation-heading-font-weight: 500;
+$presentation-heading-font-weight: 600;
 
 // code blocks
 //$code-block-border-color: rgba(233, 236, 239, 0.5) !default;
@@ -225,3 +225,37 @@ details > summary {
     font-size: 50%;
     color: $gray-color ! important;
 }
+
+
+// Images
+
+
+.rotate-left {
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    transform: rotate(-2deg); 
+}
+
+.rotate-right {
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    transform: rotate(2deg);     
+}
+
+.polaroid {
+    border: 10px solid #fff;
+    border-bottom: 85px solid #fff;
+    -webkit-box-shadow: 3px 3px 3px #111;
+    -moz-box-shadow: 3px 3px 3px #111;
+    box-shadow: 3px 3px 3px #111;
+}
+
+.shadow {
+    -moz-border-radius: 10px;
+    -moz-box-shadow: 25px 25px 25px #777;
+    -webkit-box-shadow: 25px 25px 25px #777;
+    box-shadow: 25px 25px 25px #777;
+    border-radius: 10px;  
+}
+
+
