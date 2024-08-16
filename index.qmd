@@ -20,6 +20,7 @@ format:
     slide-number: c               # Set to False to remove slide numbers
     chalkboard: true              # Set false to remove the chalkboard option
     progress: false               # Set true to have a progress bar
+    menu: false                   # Set true for menu navigation
     controls: false               # Set true to show slide controls
     controls-layout: bottom-right
     controls-tutorial: true
@@ -31,7 +32,7 @@ format:
     theme: /Users/ekstrom/ku.scss
 # Modify the title slide    
     title-slide-attributes:
-      data-background-image: kulogo.png
+      data-background-image: kulogowink.png
       data-background-size: 30%
       data-background-position: 100% 100%
 revealjs-plugins:
