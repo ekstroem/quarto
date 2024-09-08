@@ -2,7 +2,7 @@
 title: "Fancy Quarto example template"
 subtitle: "With the KU template"
 author: "Claus Thorn Ekstrøm"
-date: 2023-09-01
+date: 2024-09-01
 date-format: long
 execute:
   error: false
@@ -28,6 +28,7 @@ format:
       pointerSize: 18
       color: '#32cd32'    
 #    self-contained: true
+    menu: false    # Set true for menu navigation
     theme: /Users/ekstrom/ku.scss
 # Modify the title slide    
     title-slide-attributes:
@@ -35,8 +36,8 @@ format:
       data-background-size: 30%
       data-background-position: 100% 100%
 revealjs-plugins:
-  - pointer          # Change cursor to pointer with key q
-  - attribution
+  # - pointer          # Change cursor to pointer with key q
+  # - attribution
 editor: source
 ---
 
