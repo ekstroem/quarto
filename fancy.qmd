@@ -1,5 +1,5 @@
 ---
-title: "Fancy Quarto example template"
+title: "Fancy Quarto"
 subtitle: "With the KU template"
 author: "Claus Thorn Ekstrøm"
 date: 2024-09-01
@@ -41,9 +41,7 @@ revealjs-plugins:
 editor: source
 ---
 
-# Aloha
-
-# KU Quarto - theme
+# Modifications relative to standard template
 
 ```{r}
 #| echo: false
@@ -51,49 +49,23 @@ library("tidyverse")
 source("kutheme.R")   # Get the theme
 ```
 
-This presentation serves as a skeleton template showing some common parts of a quarto presentation using the KU template.
 
-It is not meant as a tutorial to quarto. That can be found [elsewhere](https://quarto.org/docs/presentations/revealjs/). The purpose is more to keep an extended example that works with the KU theme for easy reference.
-
-In quarto, `:::` is a CSS `div` (3 or more colons).
-
-[*Speaker notes*]{.yellow} are added to a slide using
-
-    ::: {.notes}
-    Speaker notes go here.
-    :::
+- Winking logo on title page
+- Advanced examples
 
 
-::: {.notes}
-Speaker notes go here.
+# Stack pictures on top of each other
+
+::: {.r-stack}
+![&nbsp;](pics/beerandsunset.png){.fragment height="550" style="transform: rotate(10deg)"}
+
+![&nbsp;](pics/beerandsunset.png){.fragment height="500" style="transform: rotate(1deg); transform: translate(100px, 10%);"}
+
+![&nbsp;](pics/beerandsunset.png){.fragment height="450" style="transform: rotate(-10deg)"}
 :::
 
-## Check template - no math
-
-This presentation serves as a skeleton template showing some common parts of a quarto presentation using the KU template.
-
-It is not meant as a tutorial to quarto. That can be found [elsewhere](https://quarto.org/docs/presentations/revealjs/). The purpose is more to keep an extended example that works with the KU theme for easy reference.
-
-It is not meant as a tutorial to quarto. That can be found [elsewhere](https://quarto.org/docs/presentations/revealjs/). The purpose is more to keep an extended example that works with the KU theme for easy reference.
-
-It is not meant as a tutorial to quarto. That can be found [elsewhere](https://quarto.org/docs/presentations/revealjs/). The purpose is more to keep an 
-
-## Check template - with math
-
-```{r}
-#| echo: false
-library("tidyverse")
-source("kutheme.R")   # Get the theme
-```
 
 
-This presentation serves as a skeleton template showing some common parts of a quarto presentation using the KU template.
-
-It is not meant as a tutorial to quarto. That can be found [elsewhere](https://quarto.org/docs/presentations/revealjs/). The purpose is more to keep an extended example that works with the KU theme for easy reference.
-
-In quarto, `:::` is a CSS `div` (3 or more colons).
-
-[*Speaker notes*]{.yellow} are added to a slide using
 
 
 # iframe background {background-iframe="iframe/index.html"}
