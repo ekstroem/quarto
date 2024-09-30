@@ -41,7 +41,7 @@ revealjs-plugins:
 editor: source
 ---
 
-# Modifications relative to standard template
+# Modifications 
 
 ```{r}
 #| echo: false
@@ -49,15 +49,23 @@ library("tidyverse")
 source("kutheme.R")   # Get the theme
 ```
 
+All relative to standard template:
 
 - Winking logo on title page
 - Advanced examples
 
 
+# {background-image="./pics/olsenbanden.jpg" background-size="auto 100%" background-position="-100% 0%"}
+
+
 # Stack pictures on top of each other
 
+Notice the combination of `r-stack` and `fragment` classes.
+
+
 ::: {.r-stack}
-![&nbsp;](pics/beerandsunset.png){.fragment height="550" style="transform: rotate(10deg)"}
+
+![&nbsp;](pics/beerandsunset.png){height="550" style="transform: rotate(10deg)"}
 
 ![&nbsp;](pics/beerandsunset.png){.fragment height="500" style="transform: rotate(1deg); transform: translate(100px, 10%);"}
 
@@ -65,6 +73,61 @@ source("kutheme.R")   # Get the theme
 :::
 
 
+# Four quadrants
+
+::: columns
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%"}
+::: bulletbox
+::: {.fade-in-then-semi-out}
+![](pics/beerandsunset.png){width="450px" height="200px"}
+:::
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%"}
+::: bulletbox
+::: {.fragment .fade-in-then-semi-out}
+![](pics/beerandsunset.png){width="450px" height="200px"}
+:::
+:::
+:::
+
+::: {.column width="5%"}
+:::
+:::
+
+::: columns
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%"}
+::: bulletbox
+::: {.fragment .fade-in-then-semi-out}
+![](pics/beerandsunset.png){width="450px" height="200px"}
+:::
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%"}
+::: bulletbox
+::: {.fragment .fade-in-then-semi-out}
+![](pics/beerandsunset.png){width="450px" height="200px"}
+:::
+:::
+:::
+
+::: {.column width="5%"}
+:::
+:::
 
 
 
