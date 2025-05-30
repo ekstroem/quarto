@@ -16,7 +16,7 @@ $presentation-title-font-size-root: 4px !default;
 
 // colors
 $main-color: #901A1E !default;
-$body-bg: #16161d !default;
+$body-bg: #000000 !default;  // Used to be eigengrau #16161d
 $body-color: #fff !default;
 $link-color: #901A1E !default;
 $selection-bg: #e7ad52 !default;
@@ -58,10 +58,25 @@ $code-block-border-color: rgba(33, 236, 239, 0.5) !default;
   font-weight: bold;
 }
 
+.orange {
+  color: #ffac1c;
+  font-weight: bold;
+}
+
+.green {
+  color: #5ce65c;
+  font-weight: bold;
+}
+
 .white {
   color: #ffffff;
   font-weight: bold;
 }
+
+.gray {
+  color: #777777;
+}
+
 
 .red {
   color: #ff0000;
